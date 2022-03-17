@@ -1,6 +1,14 @@
 // TODO: Include packages needed for this application
+
 // importing the package: inquirer
 const inquirer = require('inquirer');
+const fs = require('fs');
+
+// need to pull the generateMarkdown file-- activity 15 
+// const generateMarkdown = require('./utils/generateMarkdown');
+
+// TODO: Create an array of questions for user input
+// const questions = [];
 
 inquirer.prompt([
     {
@@ -17,36 +25,58 @@ inquirer.prompt([
     
     {
         type: 'input',
-        message: 'Do you want to inclue a Table of Contents?',
-        name: 'Table of Contents'
-    },
-    // need a yes no then follow up question for table of contents then
-    {
-        type: 'input',
-        message: 'What steps required to install your project?',
+        message: 'What steps are required to install your project?',
         name: 'Installation'
     },
     
     {
         type: 'input',
-        message: 'Upload a visual',
-        name: 'Visual'
+        message: 'Provide usage instructions and/or upload a visual.',
+        name: 'Usage/Visual'
+    },
+
+    {
+        type: 'input',
+        message: 'Did you collaborate with anyone on this project?',
+        name: 'Credits'
+    },
+    
+    {
+        type: 'checkbox',
+        message: 'What type of license was used?',
+        name: 'License',
+        choices: [
+            {name: 'MIT', value: 'mit'},
+            {name: 'Apache', value: 'apache'},
+            {name: 'GPLv3', value: 'gplv3'},
+            {name: 'Other', value: 'other'},
+        ]
     },
     
     {
         type: 'input',
-        message: 'Do you need to inclue a license?',
-        name: 'license'
+        message: 'Do you want to include any badges?',
+        name: 'Badges'
     },
 ])
-// TODO: Create an array of questions for user input
-const questions = [];
+// we are dealing with a pre-built function 
+ //allows us to do something with the the dot relates to an object  
+//  --promise based method/function- whatever I append .then to- do this then do that and promise me it will do something
+.then(function (answer){  //will only work if after ) or directly on next line--no empty spaces
+    console.log(answer.title);  //when you see a dot it is a dead giveaway that you are working w/objects, to the left of . data passed back feom prompt method and gives acces to the .then. to the right of it is a property or method, in this case if after the name if there is a set of () then it is an object function aka method if doesn't have it then just a property.
+});
+
+
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+function writeToFile(fileName, data) {
 
-// TODO: Create a function to initialize app
-function init() {}
+    fs.writeFile()
 
-// Function call to initialize app
-init();
+// }
+
+// // TODO: Create a function to initialize app
+// function init() {}
+
+// // Function call to initialize app
+// init();

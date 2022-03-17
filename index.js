@@ -71,7 +71,11 @@ inquirer.prompt([
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
 
-    fs.writeFile()
+    fs.writeFile(fileName, data, function (err) {
+        console.log(fileName);
+        console.log(data);
+        if (err) return console.log(err)});
+    };
 
 // }
 

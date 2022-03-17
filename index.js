@@ -17,8 +17,26 @@ inquirer.prompt([
     
     {
         type: 'input',
-        message: '',
-        name: 'description'
+        message: 'Do you want to inclue a Table of Contents?',
+        name: 'Table of Contents'
+    },
+    // need a yes no then follow up question for table of contents then
+    {
+        type: 'input',
+        message: 'What steps required to install your project?',
+        name: 'Installation'
+    },
+    
+    {
+        type: 'input',
+        message: 'Upload a visual',
+        name: 'Visual'
+    },
+    
+    {
+        type: 'input',
+        message: 'Do you need to inclue a license?',
+        name: 'license'
     },
 ])
 // TODO: Create an array of questions for user input

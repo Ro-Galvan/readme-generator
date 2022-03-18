@@ -76,56 +76,26 @@ const questions = [
 // });
 
 
-
 // TODO: Create a function to write README file
 
+    fs.writeFile(fileName, data, function (err) {
+        console.log(fileName);
+        console.log(data);
+        if (err) return console.log(err)});
+    // else{
+    //     return console.log('it worked');
+    // }
 
-// function writeToFile(fileName, data) {
-//     return`# ${data.title}
-//     # Description
-//     ${data.description}
-//     # Table of Contents
-//     - [Installation](#installation)
-//     - [Usage](#ssage)
-//     - [Credits](#credits)
-//     - [License](#license)
-//     - [Badges](#badges)
-//     - [Contact](#contact)
-//     # Installation
-//     Following the below steps: 
-//     ${data.Installation}
-//     # Usage
-//     ${data.Usage}
-//     # Credits
-//     ${data.Credits}
-//     # Username
-//     Link to deployed website:
-//     https://github.com/${data.Username}/${data.title}
-//     # License
-//     ${data.License}
-//     # Badges
-//     ${data.Badges}
-//     # Contact
-//     ${data.Contact}
-//     `
-// };
-    // fs.writeFile(fileName, data, function (err) {
-    //     console.log(fileName);
-    //     console.log(data);
-    //     if (err) return console.log(err)});
-    // ;
 
-// }
+// // TODO: Create a function to initialize app
+// function init() {
+//     inquirer.prompt(questions)
+//     .then(function(data) {
+//         fs.writeFile('README.md', generateMarkdown(data));
+//         console.log(data)
+//         return questions;
+//     }
+// )}
 
-// TODO: Create a function to initialize app
-function init() {
-    inquirer.prompt(questions)
-    .then(function(data) {
-        fs.writeFile('README.md', generateMarkdown(data));
-        console.log(data)
-        return questions;
-    }
-)}
-
-// Function call to initialize app
-init();
+// // Function call to initialize app
+// init();

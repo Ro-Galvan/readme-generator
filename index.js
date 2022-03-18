@@ -108,11 +108,12 @@ function writeToFile(fileName, data) {
     # Contact
     ${data.Contact}
     `
-    fs.writeFile(fileName, data, function (err) {
-        console.log(fileName);
-        console.log(data);
-        if (err) return console.log(err)});
-    };
+};
+    // fs.writeFile(fileName, data, function (err) {
+    //     console.log(fileName);
+    //     console.log(data);
+    //     if (err) return console.log(err)});
+    // ;
 
 // }
 
@@ -120,8 +121,9 @@ function writeToFile(fileName, data) {
 function init() {
     inquirer.prompt(questions)
     .then(function(data) {
-        writeToFile('README.md', generateMarkdown(data));
+        fs.writeToFile('README.md', generateMarkdown(data));
         console.log(data)
+        return;
     }
 )}
 

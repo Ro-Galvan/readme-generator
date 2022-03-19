@@ -21,30 +21,30 @@
 function generateMarkdown(data) {
   return `# ${data.title}
   # Description
-  //     ${data.description}
-  //     # Table of Contents
-  //     - [Installation](#installation)
-  //     - [Usage](#ssage)
-  //     - [Credits](#credits)
-  //     - [License](#license)
-  //     - [Badges](#badges)
-  //     - [Contact](#contact)
-  //     # Installation
-  //     Following the below steps: 
-  //     ${data.Installation}
-  //     # Usage
-  //     ${data.Usage}
-  //     # Credits
-  //     ${data.Credits}
-  //     # Username
-  //     Link to deployed website:
-  //     https://github.com/${data.Username}/${data.title}
-  //     # License
-  //     ${data.License}
-  //     # Badges
-  //     ${data.Badges}
-  //     # Contact
-  //     ${data.Contact}
+      ${data.description}
+      # Table of Contents
+      - [Installation](#installation)
+      - [Usage](#ssage)
+      - [Credits](#credits)
+      - [License](#license)
+      - [Badges](#badges)
+      - [Contact](#contact)
+      # Installation
+      Following the below steps: 
+      ${data.Installation}
+      # Usage
+      ${data.Usage}
+      # Credits
+      ${data.Credits}
+      # Username
+      Link to deployed website:
+      https://github.com/${data.Username}/${data.title}
+      # License
+      ${data.License}
+      # Badges
+      ${data.Badges}
+      # Contact
+      ${data.Contact}
 `;
 }
 

@@ -92,7 +92,7 @@ function init() {
     inquirer.prompt(questions) //calling/passing the questions object from above--.using the prompt method from inquirer (object) module that I imported at the top 
     .then(function (responses){          //after ?'s are asked .then returns promise and gives data (aka the answers) and then
         writeToFile('./dist/README.md', generateMarkdown(responses));  //-calling writeToFile function and passing arguments: 1. fileName is now path of where to create the file 2. data is now pulling template literal from generateMarkdown file which contains answers to questions
-        console.log(responses.title)
+        // console.log(responses.title)
         // return questions;
     })};
 // )}

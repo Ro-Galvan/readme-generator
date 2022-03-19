@@ -55,4 +55,4 @@ function generateMarkdown(data) {
 //     `
 // };
 
-module.exports = generateMarkdown;
+module.exports = generateMarkdown; //if you add the license function change to module.export.generateMarkdown = generateMarkdown; + the 2nd function name in same style

@@ -1,9 +1,10 @@
 // TODO: Include packages needed for this application
 
-// importing the package: inquirer
+    // importing the package/module: inquirer
 const inquirer = require('inquirer');
+    // importing the package/module: fs -file system
 const fs = require('fs');
-// need to pull the generateMarkdown file-- activity 15 
+    // need to pull the generateMarkdown file-- activity 15 
 const generateMarkdown = require('./utils/generateMarkdown');
 
 // TODO: Create an array of questions for user input
@@ -11,7 +12,7 @@ const questions = [
     {
         type: 'input',
         message: 'Your Project\'s Title?',
-        name: 'title'
+        name: 'title' // The name property is a must since it is used in the storing of answers
     },
 
     {
@@ -75,27 +76,26 @@ const questions = [
 //     console.log(answer.title);  //when you see a dot it is a dead giveaway that you are working w/objects, to the left of . data passed back feom prompt method and gives acces to the .then. to the right of it is a property or method, in this case if after the name if there is a set of () then it is an object function aka method if doesn't have it then just a property.
 // });
 
-
 // TODO: Create a function to write README file
-
-    fs.writeFile(fileName, data, function (err) {
-        console.log(fileName);
-        console.log(data);
-        if (err) return console.log(err)});
-    // else{
-    //     return console.log('it worked');
-    // }
-
-
-// // TODO: Create a function to initialize app
-// function init() {
-//     inquirer.prompt(questions)
-//     .then(function(data) {
-//         fs.writeFile('README.md', generateMarkdown(data));
-//         console.log(data)
-//         return questions;
-//     }
+function writeToFile(fileName, data) {
+     // err catch taken from activity 13 line 15-16
+    fs.writeFile(fileName, data, (err) => {
+        err ? console.error(err) : console.log('Success!');
+                // fs.writeFile('./dist/README.md', data, (err) => {
+                    // console.log(fileName);
+                    // console.log(data);
+});
+}
+    
+// TODO: Create a function to initialize app
+function init() {
+    inquirer.prompt(questions) //calling/passing the questions object from above--.using the prompt method from inquirer (object) module that I imported at the top 
+    .then(function(data) {          //after ?'s are asked then take data (aka the answers) and promise that
+        writeToFile('./dist/README.md', generateMarkdown);
+        // console.log(data)
+        // return questions;
+    })};
 // )}
 
-// // Function call to initialize app
-// init();
+// Function call to initialize app
+init();

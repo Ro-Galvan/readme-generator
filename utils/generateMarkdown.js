@@ -20,30 +20,42 @@
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   return `# ${data.title}
+
 # Description
   ${data.description}
+
+  Link to github repo:
+  https://github.com/${data.Questions}/${data.title}
+
 # Table of Contents
   - [Installation](#installation)
   - [Usage](#usage)
   - [Credits](#credits)
+  - [How to Contribute](#how-to-contribute)
+  - [Tests](#tests)
   - [License](#license)
   - [Badges](#badges)
-  - [Contact](#contact)
+  - [Questions](#questions)
 # Installation
-  Following the below steps: 
+  Follow the below steps: 
   ${data.Installation}
 # Usage
   ${data.Usage}
 # Credits
   ${data.Credits}
-# Username
-  Link to deployed website:
-  https://github.com/${data.Username}/${data.title}
+# How to Contribute
+  ${data.HowtoContribute}
+# Tests
+  ${data.Tests}
 # License
   ${data.License}
 # Badges
   ${data.Badges}
-# Contact
+# Questions
+  Link to my github:
+  https://github.com/${data.Questions}
+ 
+  Contact me:
   ${data.Contact}
 `;
 }

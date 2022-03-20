@@ -11,7 +11,7 @@ const generateMarkdown = require('./utils/generateMarkdown');
 const questions = [
     {
         type: 'input',
-        message: 'Your Project\'s Title?',
+        message: 'What is your project\'s title?',
         name: 'title' // The name property is a must since it is used in the storing of answers
     },
 
@@ -41,10 +41,17 @@ const questions = [
     
     {
         type: 'input',
-        message: 'What is your github username?',
-        name: 'Username'
+        message: 'Provide guidelines on how other developers can contribute.',
+        name: 'How to Contribute'
     },
     
+    {
+        type: 'input',
+        message: 'If you wrote any tests, explain how developers can run them.',
+        name: 'Tests'
+    },
+    
+
     {
         type: 'checkbox',
         message: 'What type of license was used?',
@@ -63,6 +70,12 @@ const questions = [
         name: 'Badges'
     },
     
+    {
+        type: 'input',
+        message: 'What is your github username?',
+        name: 'Questions'
+    },
+
     {
         type: 'input',
         message: 'What is your email?',

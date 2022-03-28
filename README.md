@@ -3,6 +3,7 @@
 
 You will be able to create a readme with this generator in a matter of minutes. You can use the time that you save by using this to focus on your coding! 
 
+Link to demo video: https://www.awesomescreenshot.com/video/8108330?key=6b1bcad598f7d679ee58c662f6ebf1bb
 
 
 
@@ -29,5 +30,5 @@ You will need to install node.js along with the inquirer package.
 
 Demo
 =================
-
+Link to demo video: https://www.awesomescreenshot.com/video/8108330?key=6b1bcad598f7d679ee58c662f6ebf1bb
 

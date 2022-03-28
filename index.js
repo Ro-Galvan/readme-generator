@@ -89,18 +89,16 @@ const questions = [
 //     console.log(answer.title);  //when you see a dot it is a dead giveaway that you are working w/objects, to the left of . data passed back feom prompt method and gives acces to the .then. to the right of it is a property or method, in this case if after the name if there is a set of () then it is an object function aka method if doesn't have it then just a property.
 // });
 
-// TODO: Create a function to write README file
-function writeToFile(fileName, data) { //ppparameters
+// a function to write README file
+function writeToFile(fileName, data) { //parameters
      // err catch taken from activity 13 line 15-16
     fs.writeFile(fileName, data, (err) => {
-        err ? console.error(err) : console.log('Success!');  //is this the promise?
-                // fs.writeFile('./dist/README.md', data, (err) => {
-                    // console.log(fileName);
-                    // console.log(data);
+        err ? console.error(err) : console.log('Success!');  
+        
 });
 }
     
-// TODO: Create a function to initialize app
+//  Create a function to initialize app
 function init() {
     inquirer.prompt(questions) //calling/passing the questions object from above--.using the prompt method from inquirer (object) module that I imported at the top 
     .then(function (responses){          //after ?'s are asked .then returns promise and gives data (aka the answers) and then
@@ -108,21 +106,7 @@ function init() {
         // console.log(responses.title)
         // return questions;
     })};
-// )}
+
 
 // Function call to initialize app
 init();
-
-// return new Promise((resolve, reject) => {
-    
-// });
-
-
-
-// var num1 = 1;
-// var num2 = 2;
-// function addNums(chocolate, mountaintop) {
-//     return chocolate + mountaintop;
-// }
-
-// addNums(num1, num2);

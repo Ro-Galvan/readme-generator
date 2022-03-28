@@ -1,10 +1,10 @@
-# README-Generator
+# Readme-Generator
 
 # Description
-  This application allows a user to create a readme generator in a matter of minutes simply be answering a few questions and having the markdown content created for them.
+  This will auto-create a readme for you and save you time!
 
   Link to github repo:
-  https://github.com/Ro-Galvan/README-Generator
+  https://github.com/Ro-Galvan/Readme-Generator
 
 # Table of Contents
   - [Installation](#installation)
@@ -16,12 +16,12 @@
   - [Badges](#badges)
   - [Questions](#questions)
 # Installation
-  Following the below steps: 
-  Install Inquirer package and fs package
+  Follow the below steps: 
+  install inquirer package 
 # Usage
-  Demo video will be uploaded soon
+  video coming soon
 # Credits
-  No
+  no
 # How to Contribute
   undefined
 # Tests
@@ -29,10 +29,10 @@
 # License
   mit
 # Badges
-  
+  no
 # Questions
   Link to my github:
   https://github.com/Ro-Galvan
  
   Contact me:
-  ro@gmail.com
+  ro@me.com
